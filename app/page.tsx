@@ -1,10 +1,7 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { ArrowRight, Bot, CalendarDays, Code2, Gem, Play, Video } from "lucide-react";
 import { motion } from "framer-motion";
-
-const FactoryScene = dynamic(() => import("../components/FactoryScene"), { ssr: false });
 
 const services = [
   { n: "01", title: "Brand & Marketing", icon: Gem, items: ["Branding & identity", "Strategy & campaigns", "Social media & advertising", "SEO / SEM", "Copywriting & growth"] },
@@ -25,7 +22,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="home">
-        <FactoryScene />
+        <div className="heroBg" style={{ backgroundImage: "url(/hero-factory.jpg)" }} aria-hidden="true" />
         <div className="heroShade" />
         <nav className="nav shell">
           <a className="brand" href="#home">FACTORY<span>CREATIVE + TECHNOLOGY STUDIO</span></a>
